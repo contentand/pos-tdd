@@ -28,7 +28,7 @@ public class Pos {
 
     private NavigableMap<Integer, Integer> formCoins(List<Integer> supportedCoins) {
         NavigableMap<Integer, Integer> coins = new TreeMap<>(Comparator.reverseOrder());
-        supportedCoins.forEach(coin -> coins.put(coin, 10));
+        supportedCoins.forEach(coin -> coins.put(coin, 1));
         return coins;
     }
 

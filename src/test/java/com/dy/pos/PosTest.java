@@ -130,7 +130,13 @@ public class PosTest {
 
     @Test
     public void returnsFalseIfChangeIsUnavailable() throws Exception {
-
-
+        pos.insert(50);
+        pos.addOrder("Tea", 1);
+        pos.buy();
+        pos.getChange();
+        pos.insert(50);
+        pos.addOrder("Tea", 1);
+        pos.buy();
+        assertThat(pos.isChangeAvailable(), is(false));
     }
 }
